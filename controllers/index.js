@@ -1,5 +1,5 @@
 const helloWorld = (req, res, next) => {
-    res.json('Hello Worls');
+    res.json('Hello World');
 };
 
-module.exports = { helloWorld}
+module.exports = { helloWorld }

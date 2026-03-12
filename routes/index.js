@@ -3,4 +3,6 @@ const controller = require('../controllers')
 
 routes.get('/', controller.helloWorld);
 
+routes.use('/contacts', require('./contacts'));
+
 module.exports = routes
