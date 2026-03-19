@@ -22,6 +22,7 @@ const getSingle = async (req, res) => {
 }
 
 const createContacts = async (req, res) => {
+    //swagger.tags=['Contacts']
     const contact = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -39,7 +40,7 @@ const createContacts = async (req, res) => {
 }
 
 const updateContacts = async (req, res) => {
-    //Swagger.tags={'Contacts'}
+    //swagger.tags=['Contacts']
     const contact = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -58,6 +59,7 @@ const updateContacts = async (req, res) => {
 }
 
 const deleteContacts = async (req, res) => {
+    //swagger.tags=['Contacts']
     const contactId = new ObjectId(req.params.id);
     const response = await mongodb.getDatabase().db().collection('contacts').deleteOne({_id: contactId });
     if (response.deletedCount > 0) {
